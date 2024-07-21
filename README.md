@@ -7,3 +7,7 @@ La cola de espera no se implementó para esta versión nueva del proyecto anteri
 
 Se usa TomCat como servidor web y se dockeriza el proyecto con una imagen para la BD (mysql) y otra para la App.
 Existen 2 servlets, uno para mostrar la lista de los 8 lugares que contiene la sala del videojuego Roblox y otro para añadir un nuevo jugador a la sala.
+
+IMPORTANTE:
+Ejecutar el comando docker-compose up --build para generar las imágenes de docker y crear los contenedores.
+La app utiliza el puerto 8080 y la base de datos el puerto 3308.
