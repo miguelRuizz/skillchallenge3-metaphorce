@@ -1,0 +1,10 @@
+javac -cp "lib/servlet-api.jar" -d build src/com/example/PlayerServlet.java
+cp -r web/* build/
+mkdir -p build/WEB-INF/classes
+cp -r build/com build/WEB-INF/classes/
+jar cvf PlayerLobbys.war -C build .
+copy PlayerLobbys.war apache-tomcat-9.0.91\webapps
+
+docker build -t player_lobby .
+docker run -d -p 8080:8080 player_lobby
+docker-compose up --build
